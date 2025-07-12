@@ -24,7 +24,7 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: safebox2kdbx.jar 
+        name: safebox2kdbx
         path: safebox2kdbx/target/safebox2kdbx-*.jar
         retention-days: 90
 
