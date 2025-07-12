@@ -19,6 +19,10 @@
 При преобразовании папок некоторые из них попадают в группу осиротевших. Такое случается, если у папки нет родителя. Есть подозрение, что это остатки изначального механизма удаления папок, но полной уверенности в этом нет.
 
 
+### Предусловия
+
+1. На ПК должена быть установлена JRE 21.
+
 ### Параметры запуска
 #### Обязательные параметры
 
@@ -67,7 +71,9 @@ During template and card conversion, it tries to use standard KDBX card fields.
 
 When converting folders, some of them may end up in the "orphaned" group. This occurs if a folder has no parent. It is suspected that this stems from the original folder deletion mechanism, but there is no absolute certainty about this.
 
----
+## Prerequisites
+
+1. JRE 21 should be installed on the PC.
 
 ### Launch Parameters
 
