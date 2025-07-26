@@ -6,6 +6,7 @@ on: [workflow_dispatch]
 
 jobs:
   release:
+    if: contains('["mak-42"]', github.actor)
     runs-on: ubuntu-latest
     permissions: write-all
 
