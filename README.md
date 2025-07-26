@@ -3,6 +3,7 @@
 1. [English](#english)
 
 ## Русский
+
 ### Назначение
 
 Приложение предназначено для переноса базы зашифрованных паролей и зашифрованных заметок из формата Safebox (Сейф) в KDBX.
@@ -23,7 +24,12 @@
 
 1. На ПК должена быть установлена JRE 21.
 
+### Получение исполняемого файла
+
+Исполняемый файл следует скачать из артефактов последнего релиза: [safebox2kdbx-x.x.x.jar](https://github.com/mak-42/safebox2kdbx/releases/latest).
+
 ### Параметры запуска
+
 #### Обязательные параметры
 
 При запуске следует задать следующие параметры:
@@ -56,6 +62,7 @@ java -Dconverter.source-path=./safabox -Dconverter.source-password=qwerty -Dconv
 | converter.field.name.username | Множество строк | Наименование полей, которые (первое по порядку, если подходящих полей в карточке несколько) будут преобразованы в стандартное поле имени пользователя.<br/><br/>По умолчанию заполнены поля из стандартных шаблонов на разных языках. |
 
 ## English
+
 ### Purpose
 
 The application is designed to migrate an encrypted password database and encrypted notes from the Safebox format to KDBX.
@@ -74,6 +81,10 @@ When converting folders, some of them may end up in the "orphaned" group. This o
 ## Prerequisites
 
 1. JRE 21 should be installed on the PC.
+
+### Obtaining the Executable File
+
+The executable file should be downloaded from the artifacts of the latest release: [safebox2kdbx-x.x.x.jar](https://github.com/mak-42/safebox2kdbx/releases/latest).
 
 ### Launch Parameters
 
