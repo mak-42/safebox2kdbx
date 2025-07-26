@@ -17,6 +17,10 @@ jobs:
         java-version: '21'
         distribution: 'liberica'
         cache: maven
+    - name: Configure git user for release commits
+      run: |
+        git config --global user.email github-actions
+        git config --global user.name github-actions@github.com        
     - name: Build with Maven
       run: |
         mvn --batch-mode clean
