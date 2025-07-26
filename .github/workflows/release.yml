@@ -21,7 +21,7 @@ jobs:
       run: |
         git config --global user.email github-actions
         git config --global user.name github-actions@github.com        
-    - name: Build with Maven
+    - name: Prepare and perform release with Maven
       run: |
         mvn --batch-mode clean
         mvn --batch-mode release:prepare --file pom.xml -DpushChanges=false
@@ -33,7 +33,6 @@ jobs:
         branch: ${{ github.ref }}
     - name: Publish release
       uses: softprops/action-gh-release@v2
-      if: github.ref_type == 'tag'      
       with:
         files: |
           target/checkout/safebox2kdbx/target/safebox2kdbx-*.jar 
