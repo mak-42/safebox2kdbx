@@ -26,6 +26,10 @@ jobs:
         mvn --batch-mode clean
         mvn --batch-mode release:prepare --file pom.xml -DpushChanges=false
         mvn --batch-mode release:perform --file pom.xml -DlocalCheckout=true
+    - name: Set release tag
+      id: tag
+      run: |
+        echo "RELEASE_TAG=$(git tag --sort=committerdate)" >> $GITHUB_OUTPUT
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
@@ -34,5 +38,6 @@ jobs:
     - name: Publish release
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: ${{ steps.tag.outputs.RELEASE_TAG }}
         files: |
           target/checkout/safebox2kdbx/target/safebox2kdbx-*.jar 
